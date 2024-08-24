@@ -40,3 +40,27 @@ Los **plugins** en Maven son herramientas que realizan tareas específicas duran
 
 El **repositorio central de Maven** es un repositorio remoto que contiene una amplia colección de bibliotecas y herramientas que los proyectos pueden utilizar. Es el centro para que los desarrolladores encuentren y compartan dependencias, facilitando la integración y el uso de bibliotecas en diferentes proyectos.
 
+
+## Ejercicio de las figuras
+
+Creando un proyecto maven con ayuda de los arquetipos (archetypes).
+
+![creatingProject](img/creatingProject.png)
+
+Comprobando que se haya creado correctamente el conjunto de directorios con un conjunto de archivos básicos.
+
+`$ cd Patterns` \
+`$ tree`
+
+![directoryTree](img/directoryTree.png)
+
+
+## Compilar y ejecutar
+
+Para compilar, utilizar el siguiente comando, y en caso de que no actualice dependencias correctamente, utilizar la opción -U
+
+ `$ mvn package` \
+ `$ mvn -U package`
+
+### Objetivo del parámetro **package**
+
