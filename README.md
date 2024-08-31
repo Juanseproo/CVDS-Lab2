@@ -59,7 +59,7 @@ Comprobando que se haya creado correctamente el conjunto de directorios con un c
 
 ## AJUSTAR ALGUNAS CONFIGURACIONES EN EL PROYECTO
 
-En primer lugar, se tiene que cambiar la versión del compilador de Java a la version 8, para ello toca agreguegar la sección properties antes de la sección de dependencias:
+En primer lugar, se tiene que cambiar la versión del compilador de Java a la version 8, para ello toca agregar la sección properties antes de la sección de dependencias:
 
 ```
 <properties>
@@ -87,12 +87,12 @@ Si maven no actualiza las dependencias utilice la opción -U así:
 ### Objetivo del parametro package
 El parámetro package en el comando mvn package le dice a Maven que ejecute todas las fases necesarias para construir y empaquetar el proyecto. Incluyendo:
 
-1. Compile: Compila el código fuente del proyecto.
-2. Test: Ejecuta las pruebas unitarias definidas en el proyecto.
-3. Package: Empaqueta el código compilado en un formato distribuible, como un archivo JAR, WAR, etc., y lo coloca en el directorio target dentro del proyecto.
+1. `Compile`: Compila el código fuente del proyecto.
+2. `Test`: Ejecuta las pruebas unitarias definidas en el proyecto.
+3. `Package`: Empaqueta el código compilado en un formato distribuible, como un archivo JAR, WAR, etc., y lo coloca en el directorio target dentro del proyecto.
 Por lo tanto, el objetivo principal del parámetro package es generar un artefacto (JAR, WAR, etc.) que pueda ser distribuido o desplegado.
 
-Tambien existen varias otras fases quese pueden pasar como parámetros a mvn, cada una de las cuales tiene un propósito específico. Las más simples son:
+Tambien existen varias otras fases que se pueden pasar como parámetros a mvn, cada una de las cuales tiene un propósito específico. Las más simples son:
 
 A) Borra el directorio target, eliminando todos los archivos generados en compilaciones anteriores.
 ```
@@ -174,11 +174,19 @@ Ejecute múltiples veces la clase ShapeMain, usando el plugin exec de maven con 
 
 * Sin parámetros: No funciona porque la clase ShapeMain espera un parámetro de tipo RegularShapeType. Dará el error: "Parameter of type RegularShapeType is required."
 
+![alt text](img/image10.png)
+
 * Parámetro: qwerty: No funciona porque qwerty no es un valor válido de RegularShapeType. Dará el error: "Parameter 'qwerty' is not a valid RegularShapeType."
+
+![alt text](img/image11.png)
 
 * Parámetro: Pentagon: Funciona correctamente y debe imprimir algo como: "Successfully created a Pentagon with 5 sides."
 
+![alt text](img/image12.png)
+
 * Parámetro: Hexagon: Funciona correctamente y debe imprimir algo como: "Successfully created a Hexagon with 6 sides."
+
+![alt text](img/image13.png)
 
 ### NOTA: Investigue para qué sirve "gitignore" y cómo se usa.
 * ¿Qué es .gitignore y para qué sirve?
